@@ -44,13 +44,35 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Form Submission Placeholder
-    const form = document.querySelector('form');
-    if (form) {
-        form.addEventListener('submit', function (e) {
+    // Contact Form Handling (Mailto)
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            alert('Terima kasih! Pesan Anda telah kami terima.\n(Ini adalah demo, pesan tidak terkirim ke server)');
-            form.reset();
+
+            // Get values
+            const name = document.getElementById('contactName').value;
+            const email = document.getElementById('contactEmail').value; // Optional: user might want to include this in body
+            const subject = document.getElementById('contactSubject').value;
+            const message = document.getElementById('contactMessage').value;
+
+            // recipient
+            const recipient = 'karangpenangtlambah@gmail.com';
+            
+            // Construct body
+            const emailBody = `Nama: ${name}\nEmail Pengirim: ${email}\n\nPesan:\n${message}`;
+
+            // Construct mailto link
+            const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+
+            // Info for user
+            alert('Aplikasi email Anda akan terbuka untuk mengirim pesan ini. Silakan tekan tombol kirim (Send) di email Anda.');
+
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Optional: reset form
+            contactForm.reset();
         });
     }
 

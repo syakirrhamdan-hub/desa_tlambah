@@ -467,26 +467,27 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="card border-0 shadow p-4 rounded-4">
-                        <form>
+                        <form id="contactForm">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <label class="form-label" data-i18n="form_name">Nama Lengkap</label>
-                                    <input type="text" class="form-control" placeholder="Nama Anda" data-i18n="ph_name">
+                                    <input type="text" class="form-control" id="contactName" placeholder="Nama Anda"
+                                        data-i18n="ph_name">
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label" data-i18n="form_email">Email</label>
-                                    <input type="email" class="form-control" placeholder="email@contoh.com"
-                                        data-i18n="ph_email">
+                                    <input type="email" class="form-control" id="contactEmail"
+                                        placeholder="email@contoh.com" data-i18n="ph_email">
                                 </div>
                                 <div class="col-12">
                                     <label class="form-label" data-i18n="form_subject">Perihal</label>
-                                    <input type="text" class="form-control" placeholder="Judul Pesan"
-                                        data-i18n="ph_subject">
+                                    <input type="text" class="form-control" id="contactSubject"
+                                        placeholder="Judul Pesan" data-i18n="ph_subject">
                                 </div>
                                 <div class="col-12">
                                     <label class="form-label" data-i18n="form_message">Pesan</label>
-                                    <textarea class="form-control" rows="5" placeholder="Tuliskan pesan Anda..."
-                                        data-i18n="ph_message"></textarea>
+                                    <textarea class="form-control" id="contactMessage" rows="5"
+                                        placeholder="Tuliskan pesan Anda..." data-i18n="ph_message"></textarea>
                                 </div>
                                 <div class="col-12">
                                     <button type="submit" class="btn btn-primary w-100 rounded-pill py-2 fw-bold"
