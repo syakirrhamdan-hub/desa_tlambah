@@ -909,3 +909,109 @@ footer {
         margin-right: 5px !important;
     }
 }
+
+/* --- Responsive Audit Fixes (Profil Desa & Global) --- */
+@media (max-width: 991px) {
+    /* Adjust Section Padding/Spacing */
+    .section-padding {
+        padding: 60px 0;
+    }
+
+    /* Navbar Branding Adjustments */
+    .navbar-brand img {
+        height: 40px;
+    }
+
+    .navbar-brand div span:first-child {
+        font-size: 1rem !important;
+    }
+
+    .navbar-brand div span:last-child {
+        font-size: 0.55rem !important;
+    }
+
+    /* Hero Height on Tablet/Mobile */
+    #hero {
+        height: auto;
+        min-height: 500px;
+        padding-top: 120px;
+        padding-bottom: 60px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Adjust Heading Sizes */
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    h4 {
+        font-size: 1.3rem;
+    }
+
+    /* Profil Tabs - Better Mobile Experience */
+    #pills-tab {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start !important;
+        padding-bottom: 10px; /* Space for scrollbar if needed */
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #pills-tab .nav-item {
+        flex: 0 0 auto;
+    }
+
+    #pills-tab button.nav-link {
+        padding: 10px 16px !important;
+        font-size: 0.85rem;
+        white-space: nowrap;
+        margin: 0 4px;
+    }
+
+    /* Table Adjustments */
+    .table-responsive {
+        border: 1px solid var(--border-color);
+        border-radius: var(--border-radius-md);
+    }
+    
+    /* Stats Cards in Ekonomi */
+    .card h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-padding {
+        padding: 40px 0;
+    }
+
+    /* Stack Tabs on very small screens for better clickability */
+    #pills-tab {
+        flex-wrap: wrap;
+        overflow-x: visible;
+        flex-direction: column;
+    }
+
+    #pills-tab .nav-item {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    #pills-tab button.nav-link {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        justify-content: center;
+    }
+
+    /* Running Text Adjustment */
+    .running-text-label {
+        padding: 0 10px;
+        font-size: 0.7rem;
+    }
+}
