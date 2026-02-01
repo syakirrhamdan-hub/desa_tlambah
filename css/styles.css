@@ -883,3 +883,29 @@ footer {
         transform: translateY(0);
     }
 }
+
+/* Fix for Operating Hours Badge on Mobile to maintain layout consistency */
+.text-fixed {
+    white-space: normal;
+    /* Allow nice wrapping */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@media (max-width: 576px) {
+    .text-fixed {
+        font-size: 0.7rem !important;
+        /* Smaller text */
+        padding: 6px 15px !important;
+        /* Compact padding */
+        line-height: 1.2;
+        max-width: 90%;
+        /* Prevent horizontal overflow */
+    }
+
+    .text-fixed i {
+        margin-right: 5px !important;
+    }
+}
